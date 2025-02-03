@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .sora {
+        font-family: "Sora", serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+      }
+    </style>
+    <!-- Tailwind CND -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+    <!-- DaisyUI CND -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Pet Station</title>
+  </head>
+  <body>
+    <header>
+      <!-- Nav Bar -->
+      <nav class="w-full bg-[#FFF9F4] lg:p-4 lg:px-11 px-3">
+        <div class="navbar bg-base-100 bg-[#FFF9F4]">
+          <div class="navbar-start">
+            <img class="cursor-pointer" src="images/logo-header.png">
+            <p class="lg:text-xl text-base mt-5  hover:text-amber-400">Browses<span class="text-[#FFDC26]">4</span>Pets</p>
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <div>
+              <ul class="flex space-x-6 text-lg text-[#111111]">
+                <li><a href="#" class="hover:text-amber-400">Find a pet</a></li>
+                <li><a href="#" class="hover:text-amber-400">Breeds</a></li>
+                <li><a href="#"  class="hover:text-amber-400">Contact us</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="navbar-end hidden lg:flex">
+            <button class="btn btn-ghost btn-circle">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                />
+              </svg>
+            </button>
+            <button class="btn btn-ghost btn-circle">
+              <div class="indicator">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
+                  />
+                </svg>
+                <span
+                  class="badge badge-xs badge-primary indicator-item"
+                ></span>
+              </div>
+            </button>
+            <button class="btn btn-outline btn-warning mr-4">Login</button>
+            <button class="btn btn-warning rounded-xl">Register</button>
+          </div>
+          <div class="lg:hidden space-y-6  space-x-20  ml-10">
+            <input type="checkbox" id="menu-toggle" class="hidden peer" />
+            <label for="menu-toggle" class="cursor-pointer">
+              <div class="space-y-1">
+                <div class="w-6 h-0.5 bg-black"></div>
+                <div class="w-6 h-0.5 bg-black"></div>
+                <div class="w-6 h-0.5 bg-black"></div>
+              </div>
+            </label>
+          </div>
+        </div>
+        <div class="absolute top-16 right-0 w-full bg-[#FFF9F4] shadow-lg rounded-lg hidden peer-checked:flex flex-col lg:hidden space-y-4 p-4">
+      <ul class="space-y-4 text-lg text-[#111111]">
+        <li><a href="#" class="hover:text-amber-400">Find a pet</a></li>
+        <li><a href="#" class="hover:text-amber-400">Breeds</a></li>
+        <li><a href="#" class="hover:text-amber-400">Contact us</a></li>
+        <li>
+          <button class="btn btn-outline btn-warning w-full">Login</button>
+        </li>
+        <li>
+          <button class="btn btn-warning w-full">Register</button>
+        </li>
+      </ul>
+        </div>
+        </div>
+      </nav>
+    </header>
+    <hr class="lg:hidden border-2">
+    <main>
+      <!-- part-1 -->
+       <section>
+        <div class="lg:m-10 m-6 lg:p-3 relative">
+          <div class="lg:w-[2/5]">
+            <h1 class="lg:text-5xl text-3xl mb-4 font-bold">Pamper Your Pet, <br>Because <span class="text-[#ffdb26ab]">They <br> Deserve </span>the Best</h1>
+            <p class="text-base text-[#111111]">Discover a world of treats, toys, and essentials <br> handpicked for your furry friends. Shop now and make <br> tails wag with joy!</p>
+            <button class="lg:mt-3 mt-6 bg-[#FFDC26] p-3 font-bold rounded-lg hover:bg-amber-200 duration-100">Find a pet</button>
+          </div>
+          <div class="absolute lg:top-0 lg:right-0 lg:w-3/4 w-full">
+            <img src="images/cat-big.png" alt="cat" class="lg:h-auto lg:w-[80%] w-full">
+          </div>
+        </div>
+       </section>
+       <!-- Spacing -->
+       <div class="h-60 lg:h-100"></div>
+       <!-- part-2 -->
+        <section>
+          <div  class="lg:m-10 m-6 lg:p-3 p-1">
+            <div>
+              <h1 class="text-black font-bold lg:text-3xl text-xl">Browse By Categories</h1>
+            </div>
+            <div class="my-6 grid lg:grid-cols-6 grid-cols-2">
+              <!-- card-1 -->
+              <div class="card bg-[#F9DF8A] lg:w-48 w-40 mb-4 shadow-xl">
+                <figure class="px-10 pt-10">
+                  <div class="avatar lg:mb-3 mb-2">
+                    <div class="w-24 h-24 rounded-full bg-white flex items-center justify-center">
+                      <img src="images/dog-cartoon.png" class="p-6"/>
+                    </div>
+                  </div>
+                </figure>
+                <div class="card-body items-center text-center">
+                  <h2 class="card-title text-xl font-bold">Dog</h2>
+                  <p class="text-xs">3 Items</p>
+                </div>
+              </div>
+              <!-- card-2 -->
+              <div class="card bg-[#F9DF8A] lg:w-48 w-40 mb-4 shadow-xl">
+                <figure class="px-10 pt-10">
+                  <div class="avatar lg:mb-3 mb-2">
+                    <div class="w-24 h-24 rounded-full bg-white flex items-center justify-center">
+                      <img src="images/fish-cartoon.png" class="p-6"/>
+                    </div>
+                  </div>
+                </figure>
+                <div class="card-body items-center text-center">
+                  <h2 class="card-title text-xl font-bold">Fish</h2>
+                  <p class="text-xs">3 Items</p>
+                </div>
+              </div>
+              <!-- card-3 -->
+              <div class="card bg-[#F9DF8A] lg:w-48 w-40 mb-4 shadow-xl">
+                <figure class="px-10 pt-10">
+                  <div class="avatar lg:mb-3 mb-2">
+                    <div class="w-24 h-24 rounded-full bg-white flex items-center justify-center">
+                      <img src="images/cat-cartoon.png" class="p-6"/>
+                    </div>
+                  </div>
+                </figure>
+                <div class="card-body items-center text-center">
+                  <h2 class="card-title text-xl font-bold">Cat</h2>
+                  <p class="text-xs">3 Items</p>
+                </div>
+              </div>
+              <!-- card-4 -->
+              <div class="card bg-[#F9DF8A] lg:w-48 w-40 mb-4 shadow-xl">
+                <figure class="px-10 pt-10">
+                  <div class="avatar lg:mb-3 mb-2">
+                    <div class="w-24 h-24 rounded-full bg-white flex items-center justify-center">
+                      <img src="images/bird-cartoon.png" class="p-6"/>
+                    </div>
+                  </div>
+                </figure>
+                <div class="card-body items-center text-center">
+                  <h2 class="card-title text-xl font-bold">Bird</h2>
+                  <p class="text-xs">3 Items</p>
+                </div>
+              </div>
+              <!-- card-5 -->
+              <div class="card bg-[#F9DF8A] lg:w-48 w-40 mb-4 shadow-xl">
+                <figure class="px-10 pt-10">
+                  <div class="avatar lg:mb-3 mb-2">
+                    <div class="w-24 h-24 rounded-full bg-white flex items-center justify-center">
+                      <img src="images/mouse-cartoon.png" class="p-6"/>
+                    </div>
+                  </div>
+                </figure>
+                <div class="card-body items-center text-center">
+                  <h2 class="card-title text-xl font-bold">Small Pet</h2>
+                  <p class="text-xs">3 Items</p>
+                </div>
+              </div>
+              <!-- card-6 -->
+              <div class="card bg-[#F9DF8A] lg:w-48 w-40 mb-4 shadow-xl">
+                <figure class="px-10 pt-10">
+                  <div class="avatar lg:mb-3 mb-2">
+                    <div class="w-24 h-24 rounded-full bg-white flex items-center justify-center">
+                      <img src="images/rabbit-cartoon.png" class="p-6"/>
+                    </div>
+                  </div>
+                </figure>
+                <div class="card-body items-center text-center">
+                  <h2 class="card-title text-xl font-bold">Rabbit</h2>
+                  <p class="text-xs">3 Items</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- part-3 -->
+         <section>
+          <div class="bg-[#FFF9F4]">
+            <div class="lg:m-10 m-6 lg:p-3 p-4">
+              <h1 class="font-bold lg:text-3xl text-2xl mt-4 text-black">Trending Pet Products</h1>
+            </div>
+            <!-- card -->
+             <div class="lg:m-10 m-6 lg:p-3 p-4 overflow-hidden">
+              <!-- big card -->
+               <div class="bg-[#F9DF8A] relative w-[100%] lg:w-[26%] rounded-xl h-[405px] p-8">
+                <div>
+                  <h1 class="font-bold text-3xl text-black">T- Shirt For Dogs</h1>
+                  <p class="w-[70%] text-black my-6">Discover a world of treats, toys, and essentials handpicked </p>
+                  <button class="bg-white rounded text-xs p-2 hover:bg-orange-300">Shope Now</button>
+                </div>
+                <div class="absolute left-[40%] top-[35%] h-[67%]">
+                  <img src="images/cute-pet-small.png" alt="pet small" class="h-[100%]">
+                </div>
+               </div>
+               <!-- 9 cards -->
+                <!-- card's-->
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+         </section>
+    </main>
+    <footer></footer>
+  </body>
+</html>
